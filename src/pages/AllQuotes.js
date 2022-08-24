@@ -6,12 +6,12 @@ import LoadingSpinner from '../components/UI/LoadingSpinner';
 import NoQuotesFound from '../components/quotes/NoQuotesFound'
 
 
-const Dummy_Quotes=[
-    {id: 'q1', author: 'Natia', text :'Dont throw pearls to pigs'},
-    {id: 'q2', author: 'Nini', text :'work hard, drama harder'},
-    {id: 'q3', author: 'Levan', text :"I'm a lone wolf"},
+// const Dummy_Quotes=[
+//     {id: 'q1', author: 'Natia', text :'Dont throw pearls to pigs'},
+//     {id: 'q2', author: 'Nini', text :'work hard, drama harder'},
+//     {id: 'q3', author: 'Levan', text :"I'm a lone wolf"},
 
-]
+// ]
 
 const AllQuotes = () => {
   const {sendRequest, status, data:loadedQoutes, error}= useHttp(getAllQuotes, true);
