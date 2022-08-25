@@ -24,19 +24,18 @@ function App() {
 
   return (
     <Layout>
-    <Switch>
+  <Switch>   {/*<Routes> in React-rout 6 instead of Switch and 'Routs' nests every Rout*/}
       
 <Route path="/" exact>
-  <Redirect to='/quotes' />
+  <Redirect to='/quotes' />   {/* 'Navigate to' instead of 'Redirect to' in Route 6*/ }
 </Route>
-      <Route path="/quotes" exact>
-       
-        <AllQuotes/>
+      <Route path="/quotes" exact>  {/*instead of exact we need /* after link in Route 6 instead*/  }
+        <AllQuotes/>                
       </Route>
-      <Route path="/quotes/:quoteId">
+      <Route path="/quotes/:quoteId">   {/*element={<QuoteDetail/>}  in React-route 6 instead*/  }
         <QuoteDetail />
       </Route>
-      <Route path="/new-quote">
+      <Route path="/new-quote">     {/* Route 6 checks the whole matching of the link*/}
         <NewQuote />
       </Route>
       <Route path='*'><NotFound /></Route>
