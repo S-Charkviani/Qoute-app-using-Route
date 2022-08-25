@@ -6,11 +6,11 @@ import { getSingleQuote } from "../components/lib/api";
 import HighlightedQuote from "../components/quotes/HighlightedQuote";
 import LoadingSpinner from "../components/UI/LoadingSpinner";
 
-const Dummy_Quotes = [
-  { id: "q1", author: "Natia", text: "Dont throw pearls to pigs" },
-  { id: "q2", author: "Nini", text: "Work hard, party harder" },
-  { id: "q3", author: "Levan", text: "I'm a lone wolf" },
-];
+// const Dummy_Quotes = [
+//   { id: "q1", author: "Natia", text: "Dont throw pearls to pigs" },
+//   { id: "q2", author: "Nini", text: "Work hard, party harder" },
+//   { id: "q3", author: "Levan", text: "I'm a lone wolf" },
+// ];
 const QuoteDetail = () => {
   const params = useParams();
   const match = useRouteMatch();
@@ -46,7 +46,7 @@ const QuoteDetail = () => {
       <HighlightedQuote text={loadedQuote.text} author={loadedQuote.author} />
       <Route path={match.path} exact>
         <div className="centered">
-          <Link className="btn--flat" to={`${match.url}/comments`}>
+          <Link className="btn--flat" to={`${match.url}/comments`}>   {/*only comments is enough in route 6 */}
             Load Comments
           </Link>
         </div>
